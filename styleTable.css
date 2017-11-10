@@ -1,0 +1,43 @@
+
+/*https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables*/
+
+/* red color for wrong submission*/
+.error {color: #FF0000;}
+
+/* this is horrible, color besides */
+/* 
+table {
+  background-color: #ff33cc;
+}
+ */
+
+TH.header1 {
+    background-color: #386cb0; /* #2ca25f; */
+    color: white;
+    font-weight: normal;
+}
+th.header2 {
+	font-weight: normal;
+	font-size: small;
+}
+
+td.firstRow {
+	text-align: left;
+	font-size: small;
+}
+
+th.unscored {
+	background-color: #f1b6da; /* #d01c8b; */
+/* 	color: #4dac26; */
+	font-weight: normal;
+	font-size: small;
+}	
+td.unscored {
+	background-color: #f1b6da; /* #d01c8b; */
+}
+td.asterisk {
+	background-color: #ffffff; /* #d01c8b; */
+}
+/* tr:nth-child(even) {background-color: #e2e2e2} */
+tr:nth-child(even) {background-color: #99d8c9}
+/* tr:nth-child(even) {background-color: #386cb0} */
