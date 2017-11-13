@@ -1,7 +1,4 @@
-
-<!--     <COLGROUP> -->
 <COL width="400">
-<!--     </COLGROUP> -->
 <COLGROUP align="center" span="10">
 	<COL width="20">
 	<COL width="20">
@@ -14,7 +11,6 @@
 	<COL width="20">
 	<COL width="20">
 </COLGROUP>  
-<!-- 	<COL width="5"> -->
 <THEAD>
 
 <TR>
@@ -37,6 +33,5 @@
 	<th class="header2">8</th>
 	<th class="header2">9</th>
 	<th class="unscored">Unable to score</th>
-<!-- 			<th></th> for the asterisk -->
 </tr>
 </THEAD>

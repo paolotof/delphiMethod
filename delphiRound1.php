@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
   } else {
 	  $requiredFields = "* required fields";
-	}// END: if( $resp1 && $resp2 && $resp3 && $resp4 &&
+	}// END: if( $resp1 && $resp2 && $resp3 && $resp4 && ...
   
   if ($postedAll){
 		header("Location: http://localhost/~mp/test1/pimQuestionnaire/thankYou.php");
