@@ -116,18 +116,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$mergedComment = mysqli_real_escape_string($conn, $mergedComment);
 			$sql = "INSERT INTO userComments (`commentList`) VALUES ('{$mergedComment}');";
 		  if (!mysqli_query($conn, $sql)){ die('Error comments: ' . mysqli_error($conn)); }
-		}
+		} // END: if ($postComment){
     mysqli_close($conn);
     $postedAll = TRUE; 
-		
-  } else {
-	  $requiredFields = "* required fields";
-	}// END: if( $resp1 && $resp2 && $resp3 && $resp4 && ...
-  
+  } else { $requiredFields = "* required fields"; }// END: if( $resp1 && $resp2 && $resp3 && ...
   if ($postedAll){
 		header("Location: http://localhost/~mp/test1/pimQuestionnaire/thankYou.php");
-		exit;
-	}
+		exit; }
 } // END: if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 function test_input($data) {
@@ -150,7 +145,7 @@ function makeID($string){
 <head>
 <meta charset=utf-8 />
 <title>Delphi Method Tinnitus (f)MRI Round I</title>
-<link rel="stylesheet" type="text/css" href="../newStyleTable.css">
+<link rel="stylesheet" type="text/css" href="styleTable.css">
 <script>
 </script>
 </head>
@@ -220,7 +215,8 @@ for ($iQuest = 0; $iQuest < $nQuestions; $iQuest++) {
 	echo "<td class='unscored'> <center> <input type='radio' name='q" . ($iQuest+1) ."' ";
 	if (isset($q[$iQuest]) && $q[$iQuest]=="10") echo "checked='' "; 
 	echo " value='10'> </center> </td>";
-	echo "<td class='asterisk'> <span class='error'>" . $qErr[$iQuest] . "</span></td></tr>";
+	echo "<td class='asterisk'> <center> <span class='error'>" . $qErr[$iQuest] 
+	     . "</span></center></td></tr>";
 	// close table for last item
 	if ($iQuest == ($itemPerHeader[$iheader] - 1)){
 		echo "</tbody> </table>";
