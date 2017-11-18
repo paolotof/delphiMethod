@@ -198,9 +198,9 @@ $headers = array("Participants Characteristics - Demographics",
 "Technical characteristics of scan session - Sequence parameters",
 "Technical characteristics - Effect of scan session on tinnitus");
 $iheader = 0;
-$itemPerHeader = array(0, 7, 12, 19, 30, 34, 37, 40);
+$itemsPerHeader = array(0, 7, 12, 19, 30, 34, 37, 40);
 for ($iQuest = 0; $iQuest < $nQuestions; $iQuest++) {
-	if ($iQuest == $itemPerHeader[$iheader]){
+	if ($iQuest == $itemsPerHeader[$iheader]){
 		echo "<h3>$headers[$iheader]</h3><table>";
 		include("tableHeader.php");
 		echo "<tbody>";
@@ -218,7 +218,7 @@ for ($iQuest = 0; $iQuest < $nQuestions; $iQuest++) {
 	echo "<td class='asterisk'> <center> <span class='error'>" . $qErr[$iQuest] 
 	     . "</span></center></td></tr>";
 	// close table for last item
-	if ($iQuest == ($itemPerHeader[$iheader] - 1)){
+	if ($iQuest == ($itemsPerHeader[$iheader] - 1)){
 		echo "</tbody> </table>";
 	}
 }
