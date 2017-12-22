@@ -1,0 +1,68 @@
+/* red color for required fields*/
+.error {color: #FF0000;}
+TH.header1 {
+    background-color: #386cb0; 
+    color: white;
+    font-weight: normal;
+}
+TH.header12 {
+    background-color: #1a9850;
+    color: white;
+    font-weight: normal;
+}
+TH.header13 {
+    background-color: #ffd700;
+    color: white;
+    font-weight: normal;
+}
+TH.header14 {
+    background-color: #d73027;
+    color: white;
+    font-weight: normal;
+}
+th.header2 {
+	font-weight: normal;
+	font-size: small;
+}
+
+td.firstRow {
+	text-align: left;
+	font-size: small;
+	padding: 5px 5px 10px 5px;
+}
+th.unscored {
+	background-color: #f1b6da;
+	font-weight: normal;
+	font-size: small;
+}	
+td.unscored {
+	background-color: #f1b6da;
+}
+td.asterisk {
+	background-color: #ffffff;
+}
+tr:nth-child(even) {background-color: #99d8c9}
+svg {
+	font: 8px sans-serif;
+}
+.axis--x path {
+	display: none;
+}
+p.titlePlot {
+	text-align:center;
+	text-transform:capitalize;
+	font-size:small;
+	font-weight:bold;
+}
+#wrapper {
+	width: 1280px;
+	height: 200px;
+	overflow: hidden;
+} 
+#first {
+	width: 580px;
+ 	float:left;
+ 	padding: 2px 1em 2px 2px; 
+}
+#second {	float: left; }
+#third { float: left; }
