@@ -26,16 +26,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			header("Location: http://localhost/~mp/part2/delphi2_2.php");
 			exit;
 		} else {
-			echo "<p style='background-color:#d73027; color:white; font-size:x-large;'>We could not find a user matching " . $ppName . " " . $ppSurname . "<br>";
-			echo "If you did participate in Round one of this questionnaire then you might be using an ID we do not recognize. Please get in touch with Paolo (" ;
-			echo "<a href='mailto:p.toffanin@umcg.nl'>p.toffanin@umcg.nl</a>) to sort out the issue. Apologies for the inconveniences.</p>";
+			echo "<p style='background-color:#d73027; color:white; font-size:x-large;'>We could not
+			 find a user matching " . $ppName . " " . $ppSurname . "<br>";
+			echo "If you did participate in Round one of this questionnaire then you might be using
+			 an ID we do not recognize. Please get in touch with Paolo (" ;
+			echo "<a href='mailto:p.toffanin@umcg.nl'>p.toffanin@umcg.nl</a>) to sort out the issue.
+			 Apologies for the inconveniences.</p>";
 		}
 		$conn->close();
   } else {$requiredFields = "* required fields";} // END: if( $resp1 && $resp2 && $resp3 && $resp4 &&
 } // END: if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-function test_input($data) {$data = trim($data); $data = stripslashes($data); $data = htmlspecialchars($data); return $data; } 
-function makeID($string){$string = test_input($string);$string = str_replace(' ', '', $string);$string = strtolower($string);return $string;}
+function test_input($data) {
+ $data = trim($data);
+ $data = stripslashes($data);
+ $data = htmlspecialchars($data);
+ return $data; } 
+function makeID($string){
+ $string = test_input($string);
+ $string = str_replace(' ', '', $string);
+ $string = strtolower($string);
+ return $string;}
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +66,9 @@ function makeID($string){$string = test_input($string);$string = str_replace(' '
 <img src="../tinnet_2.jpg" alt="TINNET logo" style="width:354px;height:181px;">
 
 <h2>Delphi study on reporting of tinnitus (f)MRI studies - Round II</h2> 
-<p> Welcome to the second round of the Delphi study on the reporting of MRI tinnitus studies. You are invited to complete this questionnaire no later than December 4th 2017 at 12.00 PM. </p>
+<p> Welcome to the second round of the Delphi study on the reporting of MRI tinnitus 
+studies. You are invited to complete this questionnaire no later than December 4th 2017 at
+ 12.00 PM. </p>
 
 <p>Please fill in your name and surname so that we can retrieve your previous responses.</p>
 
