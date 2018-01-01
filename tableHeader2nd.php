@@ -19,7 +19,7 @@
 	<TH class="header13" colspan="3" scope="colgroup"> Important but not critical </TH>
 	<TH class="header14" colspan="3" scope="colgroup"> Critical </TH>
 	<TH class="unscored"> </TH>
-	<TH> </TH> <!-- this is for the asterisk, but maybe it does not matter -->
+	<TH> </TH> <!-- this is for the asterisk -->
 </TR>
 <tr>
 	<th></th>

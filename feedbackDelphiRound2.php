@@ -56,7 +56,7 @@ if (!$conn) { die("Connection failed: " . mysqli_connect_error()); }
 $q1 = $q1Err = $requiredFields = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$resp1 = FALSE;
-	if (empty($_POST['q1'])){ $q1Err = "*"; } else { $q1 = test_input($_POST['q1']); $resp1 = TRUE;}
+	if (empty($_POST['q1'])){$q1Err="*";} else {$q1=test_input($_POST['q1']); $resp1=TRUE;}
 	if ($resp1){
 		$qNn = 'q' . ($questions[$counter][0]);
 		$sql = "UPDATE `{$tableName}` SET `{$qNn}` = '{$q1}' 
@@ -72,13 +72,22 @@ if ($_SESSION['count'] >= $nQuestions) {
 }
 $counter = $_SESSION['count'];
 mysqli_close($conn);
-function test_input($data) {$data = trim($data);$data = stripslashes($data);$data = htmlspecialchars($data);return $data;}
-function makeID($string){$string = test_input($string);$string = str_replace(' ', '', $string);$string = strtolower($string);return $string;}
+function test_input($data){
+	$data=trim($data);
+	$data=stripslashes($data);
+	$data=htmlspecialchars($data);
+	return $data;}
+function makeID($string){
+	$string=test_input($string);
+	$string=str_replace(' ', '', $string);
+	$string=strtolower($string);
+	return $string;}
 ?>
 <!DOCTYPE html>
 <head>
 <title>Round 2 Delphi Tinnitus (f)MRI</title>
-<meta name="keywords" content="Delphi method, tinnitus, fmri, questionnaire, methods, validation, round two">
+<meta name="keywords" content="Delphi method, tinnitus, fmri, questionnaire, methods, 
+validation, round two">
 <meta name="description" content="Web based delphi method study on fMRI and tinnitus">
 <meta name="author" content="Paolo Toffanin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,14 +98,17 @@ function makeID($string){$string = test_input($string);$string = str_replace(' '
 <img src="../tinnet_2.jpg" alt="TINNET logo" style="width:354px;height:181px;">
 <h2>Delphi study on reporting of tinnitus (f)MRI studies - Round II</h2> 
 
-<p>This page display the results for each of the questions in the questionnaire you filled in the previous time. The results for each question are displayed in the bar graphs on the right side. The colors green, yellow and red reflects the importance of the item, 
+<p>This page display the results for each of the questions in the questionnaire you filled 
+in the previous time. The results for each question are displayed in the bar graphs on the 
+right side. The colors green, yellow and red reflects the importance of the item, 
 "<span style="background-color:#1a9850; color:white;">Not important</span>", 
 "<span style="background-color:#ffd700; color:black;">Important but not critical</span>", 
-"<span style="background-color:#d73027; color:white;">Critical</span>", respectively. "Unable to score" is <span style="background-color:#f1b6da; color:black;">pink</span>. One bar is 
-<span style="background-color:#386cb0; color:white;">blue</span>, this is the bar representing your response on the given question. 
+"<span style="background-color:#d73027; color:white;">Critical</span>", respectively. 
+"Unable to score" is <span style="background-color:#f1b6da; color:black;">pink</span>. One
+bar is <span style="background-color:#386cb0; color:white;">blue</span>, this is the bar 
+representing your response to the given question. 
+</p>
 <p>
-<p>
-<!--  -->
 <span class="error"><?php echo $requiredFields;?></span>
 </p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
