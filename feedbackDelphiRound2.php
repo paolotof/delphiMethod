@@ -98,9 +98,8 @@ validation, round two">
 <img src="../tinnet_2.jpg" alt="TINNET logo" style="width:354px;height:181px;">
 <h2>Delphi study on reporting of tinnitus (f)MRI studies - Round II</h2> 
 
-<p>This page display the results for each of the questions in the questionnaire you filled 
-in the previous time. The results for each question are displayed in the bar graphs on the 
-right side. The colors green, yellow and red reflects the importance of the item, 
+<p>This page displays the questionnaire items side by side with the graphs illustrating the results for each of the questions in the questionnaire you and the other experts filled 
+in the previous round. The results in the bar graphs are coded as follow: the colors green, yellow and red reflects the importance of the item, 
 "<span style="background-color:#1a9850; color:white;">Not important</span>", 
 "<span style="background-color:#ffd700; color:black;">Important but not critical</span>", 
 "<span style="background-color:#d73027; color:white;">Critical</span>", respectively. 
